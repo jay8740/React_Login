@@ -1,25 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import logo from './assets/logo64.png';
+
+class Login extends Component {
+
+  render() {
+    return(
+      <div className='Login'>
+         <h2>Welcome To Chat8740</h2>
+      </div>
+    )
+  }
+}
+
+const Header = () => {
+  return (
+      <div className="Header">
+          <img src={logo} alt="" />
+          <p className="Title">Chat8740</p>
+          <button className="SignUp">Sign Up</button>
+      </div>
+
+  );
+}
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Header />
+        <Login />
       </div>
     );
   }
